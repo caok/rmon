@@ -1,5 +1,5 @@
 en:
-  system_name: Boyu Management System
+  system_name: Management System
 
   label:
     remember_me: Remember me
@@ -15,99 +15,16 @@ en:
     sessions:
       new:
         title: Login System
-  charts:
-    show:
-      title: details of chart
-    new:
-      title: add chart
-    edit:
-      title: edit chart
-    index:
-      title: listing charts
-
-  details:
-    show:
-      title: detail's details
-    new:
-      title: add detail
-    edit:
-      title: edit detail
-    index:
-      title: listing details
 
   home:
     index:
       title: the information of lander
 
   my:
-    edit: 
+    edit:
       title: modify my information
-    information: 
+    information:
       title: my information
-    password: 
+    password:
       title: change password
 
-  parts:
-    edit:
-      title: edit part
-    index:
-      title: listing parts
-    new:
-      title: add part
-    show:
-      title: details of part
-
-  programs:
-    edit:
-      title: edit program
-    index:
-      title: listing programs
-    new:
-      title: add program
-    show:
-      title: details of program
-
-  projects:
-    edit:
-      title: edit project
-    index:
-      title: listing projects
-    new:
-      title: add project
-    show:
-      title: details of project
-
-  results:
-    edit:
-      title: edit result
-    index:
-      title: listing results
-    show:
-      title: details of result
-
-  steps:
-    edit:
-      title: edit step
-    index:
-      title: listing steps
-    new:
-      title: add step
-    show:
-      title: details of step
-
-  users:
-    edit:
-      title: edit user
-    index:
-      title: listing users
-    new:
-      title: add user
-    show:
-      title: user details of user
-    set_roles:
-      title: set roles
-
-  success: success
-  concess: concess
-  retry: retry
-  fail: fail

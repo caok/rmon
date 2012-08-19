@@ -6,29 +6,29 @@
   <thead>
     <tr>
       <th><%= model_class.human_attribute_name(:id) %></th>
-      <th><%= model_class.human_attribute_name(:location_id) %></th>
+      <th><%= model_class.human_attribute_name(:location) %></th>
       <th><%= model_class.human_attribute_name(:temperature) %></th>
       <th><%= model_class.human_attribute_name(:humidity) %></th>
       <th><%= model_class.human_attribute_name(:status) %></th>
       <th><%= model_class.human_attribute_name(:happened_at) %></th>
       <th><%= model_class.human_attribute_name(:created_at) %></th>
-      <th><%=t '.actions', :default => t("helpers.actions") %></th>
+      <th><%=t 'views.actions', :default => t("helpers.actions") %></th>
     </tr>
   </thead>
   <tbody>
     <% @infos.each do |info| %>
       <tr>
         <td><%= link_to info.id, info_path(info) %></td>
-        <td><%= info.location_id %></td>
+        <td><%= info.try(:location).try(:name) %></td>
         <td><%= info.temperature %></td>
         <td><%= info.humidity %></td>
         <td><%= info.status %></td>
         <td><%= info.happened_at %></td>
         <td><%=l info.created_at %></td>
         <td>
-          <%= link_to t('.edit', :default => t("helpers.links.edit")),
+          <%= link_to t('link.edit', :default => t("helpers.links.edit")),
                       edit_info_path(info), :class => 'btn btn-mini' %>
-          <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+          <%= link_to t('link.destroy', :default => t("helpers.links.destroy")),
                       info_path(info),
                       :method => :delete,
                       :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')),
@@ -39,6 +39,6 @@
   </tbody>
 </table>
 
-<%= link_to t('.new', :default => t("helpers.links.new")),
+<%= link_to t('link.new', :default => t("helpers.links.new")),
             new_info_path,
             :class => 'btn btn-primary' %>
