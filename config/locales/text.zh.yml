@@ -1,0 +1,285 @@
+zh:
+  system_name: 博宇生产管理系统
+  login: 登录
+  logout: 退出
+
+  views:
+    pagination:
+      previous: "前一页"
+      next: "后一页"
+      first: "首页"
+      last: "末页"
+      truncate: "..."
+    operation: "操作"
+    are_you_sure: "您确定吗？"
+    text:
+      are_you_sure: "您确定吗？"
+
+  label:
+    remember_me: 保持登录状态
+
+  button:
+    login: 登录
+    logout: 退出
+    checkout: 校验
+
+  link:
+    add_result: 追加检验结论
+    add_step: 追加工序
+    add_part: 追加零件
+    add_detail: 设定
+    add_project: 追加项目
+    add_step: 追加工序
+    add_user: 追加员工
+    grant_permission: 授予权限
+    new: 新建
+    detail: 详情
+    edit: 编辑
+    delete: 删除
+    destroy: 删除
+    index: 清单
+    show: 显示
+    statistics: 工时统计
+
+  devise:
+    sessions:
+      new:
+        title: 登录系统
+
+  categories:
+    index:
+      title: 分类清单
+    new:
+      title: 新建分类
+    edit:
+      title: 编辑分类
+    show:
+      title: 分类详情
+
+  charts:
+    show:
+      title: 图表详情
+    new:
+      title: 追加图表
+    edit:
+      title: 编辑图表
+    index:
+      title: 图表清单
+
+  details:
+    show:
+      title: 分工详情
+    new:
+      title: 追加分工
+    edit:
+      title: 编辑分工
+    index:
+      title: 分工清单
+      results: 检验记录
+    statistics:
+      title: 工时统计
+
+  home:
+    index:
+      title: 登录者信息
+
+  my:
+    edit: 
+      title: 修改我的账号信息
+    information: 
+      title: 我的账号
+    password: 
+      title: 修改密码
+
+  parts:
+    edit:
+      title: 编辑零件
+    index:
+      title: 零件清单
+      steps: 工序
+      total_weight: 总重
+      progress: 进展
+    new:
+      title: 追加零件
+    show:
+      title: 零件详情
+
+  programs:
+    edit:
+      title: 编辑工种
+    index:
+      title: 工种清单
+    new:
+      title: 追加工种
+    show:
+      title: 工种详情
+
+  projects:
+    edit:
+      title: 编辑项目
+    index:
+      title: 项目清单
+      schedule: 生产计划
+      parts: 零件记录
+      description: 描述
+      manager: 项目经理
+      status: 状态
+    new:
+      title: 追加项目
+    show:
+      title: 项目详情
+
+  results:
+    edit:
+      title: 编辑检验结论
+    index:
+      title: 检验结论清单
+    show:
+      title: 检验结论详情
+    new:
+      title: 追加检验结论
+
+  steps:
+    edit:
+      title: 编辑工序
+    index:
+      title: 工序清单
+      quantity: 派制件数
+      details: 操作者/外协
+      description: 描述
+    new:
+      title: 追加工序
+    show:
+      title: 工序详情
+
+  users:
+    edit:
+      title: 编辑员工
+    index:
+      title: 员工清单
+    new:
+      title: 追加员工
+    show:
+      title: 员工详情
+    set_roles:
+      title: 授予权限
+
+  orders:
+    edit:
+      title: 编辑采购合同
+    index:
+      title: 采购合同清单
+    show:
+      title: 采购合同详情
+    new:
+      title: 追加采购合同
+
+  suppliers:
+    edit:
+      title: 编辑供应商
+    index:
+      title: 供应商清单
+    show:
+      title: 供应商详情
+    new:
+      title: 追加供应商
+
+  lineitems:
+    edit:
+      title: 编辑采购记录
+    index:
+      title: 采购记录清单
+    show:
+      title: 采购记录详情
+    new:
+      title: 追加采购记录
+
+  items:
+    edit:
+      title: 编辑物品
+    index:
+      title: 物品清单
+    show:
+      title: 物品详情
+    new:
+      title: 追加物品
+
+  receivings:
+    edit:
+      title: 编辑入库记录
+    index:
+      title: 入库记录清单
+    show:
+      title: 入库记录详情
+    new:
+      title: 追加入库记录
+
+  deliveries:
+    edit:
+      title: 编辑出库记录
+    index:
+      title: 出库记录清单
+    show:
+      title: 出库记录详情
+    new:
+      title: 追加出库记录
+
+  warehouses:
+    edit:
+      title: 编辑仓库
+    index:
+      title: 仓库清单
+    show:
+      title: 仓库详情
+    new:
+      title: 追加仓库
+
+  item_categories:
+    edit:
+      title: 编辑类别
+    index:
+      title: 类别清单
+    show:
+      title: 类别详情
+    new:
+      title: 追加类别
+
+  notices:
+    edit:
+      title: 编辑公告
+    index:
+      title: 公告清单
+    show:
+      title: 公告详情
+    new:
+      title: 追加公告
+
+  things:
+    edit:
+      title: 编辑材料价格
+    index:
+      title: 材料价格清单
+    show:
+      title: 材料价格详情
+    new:
+      title: 追加材料价格
+
+  success: 合格
+  concess: 让步
+  retry: 返修
+  fail: 报废
+  ok: OK
+  storaged: 已入库
+  waiting: 等待审核
+  purchased: 已采购
+  refused: 已拒绝
+  agreed: 已同意
+  zizhi: 自制入库
+  waigong: 外供入库
+  waigou: 外购入库
+  transfer: 调拨入库
+  false_value: "否"
+  true_value: "是"
+  in_progress: '进行中'
+  complete: '结束'
+  close: '关闭'

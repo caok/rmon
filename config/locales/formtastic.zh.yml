@@ -1,0 +1,10 @@
+zh:
+  formtastic:
+    actions:
+      create: "追加 %{model}"
+      update: "更新 %{model}"
+    required: "必须"
+    hints:
+      step:
+        from: 空白时使用项目默认值
+        to: 空白时使用项目默认值

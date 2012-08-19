@@ -1,0 +1,17 @@
+en:
+  program:
+    maohan: maohan
+    tuzhuang: tuzhuang
+    jingong: jingong 
+    jinre: jinre 
+    waixie: waixie
+  category:
+    zizhi: zizhi
+    waigong: waigong
+    waigou: waigou
+    waigou1: waigou1
+    waigou2: waigou2
+    waigou3: waigou3
+    standard: standard
+  step:
+    assign_outsource: assign_outsource
