@@ -28,8 +28,6 @@ zh:
       back: 后退
       cancel: 撤销
 
-
-
   button:
     login: 登录
     logout: 退出
@@ -45,6 +43,8 @@ zh:
     show: 显示
     back: 后退
     cancel: 撤销
+    map: 地图监测
+    new_infos: 新建监测记录
 
   devise:
     sessions:
@@ -60,6 +60,8 @@ zh:
       title: 编辑检测位置
     show:
       title: 检测位置详情
+    map:
+      title: 监测位置分布图
   infos:
     index:
       title: 监测记录清单

@@ -1,7 +1,10 @@
 Gmaps::Application.routes.draw do
   resources :infos
 
-  resources :locations
+  resources :locations do
+    get :map, :on => :collection
+  end
+
   root :to => 'locations#index'
 
   # The priority is based upon order of creation:

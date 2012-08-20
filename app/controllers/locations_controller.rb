@@ -11,6 +11,15 @@ class LocationsController < ApplicationController
     end
   end
 
+  def map
+    @json = Location.all.to_gmaps4rails
+
+    respond_to do |format|
+      format.html
+      format.json { render json: @locations }
+    end
+  end
+
   # GET /locations/1
   # GET /locations/1.json
   def show

@@ -13,7 +13,9 @@
       <th><%= model_class.human_attribute_name(:latitude) %></th>
       <th><%= model_class.human_attribute_name(:longitude) %></th>
       <th><%= model_class.human_attribute_name(:gmaps) %></th>
-      <th><%= model_class.human_attribute_name(:created_at) %></th>
+      <th><%= model_class.human_attribute_name(:last_temperature) %></th>
+      <th><%= model_class.human_attribute_name(:last_humidity) %></th>
+      <th><%= model_class.human_attribute_name(:last_status) %></th>
       <th><%=t 'views.actions', :default => t("helpers.actions") %></th>
     </tr>
   </thead>
@@ -28,7 +30,9 @@
         <td><%= location.latitude %></td>
         <td><%= location.longitude %></td>
         <td><%= location.gmaps %></td>
-        <td><%=l location.created_at %></td>
+        <td><%= location.last_temperature %></td>
+        <td><%= location.last_humidity %></td>
+        <td><%= location.last_status %></td>
         <td>
           <%= link_to t('link.edit', :default => t("helpers.links.edit")),
                       edit_location_path(location), :class => 'btn btn-mini' %>
@@ -47,5 +51,9 @@
             new_location_path,
             :class => 'btn btn-primary' %>
 
-</br>
-<%= gmaps4rails(@json) %>
+<%= link_to t('link.map'),
+            map_locations_path, 
+            :target => "_blank",
+            :class => 'btn btn-primary' %>
+
+

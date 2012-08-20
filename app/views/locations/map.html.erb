@@ -1,0 +1,7 @@
+<div class="page-header">
+  <h1><%=t '.title' %></h1>
+</div>
+
+<ul id="markers_list"></ul>
+
+<%= gmaps("map_options" => {"auto_adjust" => "true"}, "markers" => {"data" => @json, "options" => {"list_container" => "markers_list" } }) %>

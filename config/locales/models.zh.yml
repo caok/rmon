@@ -28,6 +28,9 @@ zh:
         latitude: "纬度"
         longitude: "经度"
         actions: "操作"
+        last_temperature: "温度"
+        last_humidity: "湿度"
+        last_status: "设备状态"
         created_at: "创建时间"
         updated_at: "更新时间"
       info:
