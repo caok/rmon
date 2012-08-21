@@ -2,8 +2,9 @@ class LocationsController < ApplicationController
   # GET /locations
   # GET /locations.json
   def index
-    @locations = Location.all
-    @json = Location.all.to_gmaps4rails
+    @search = Location.search(params[:q])
+    @locations = @search.result
+    @search.build_condition
 
     respond_to do |format|
       format.html # index.html.erb
@@ -24,6 +25,8 @@ class LocationsController < ApplicationController
   # GET /locations/1.json
   def show
     @location = Location.find(params[:id])
+    @search = @location.infos.search(params[:q])
+    @infos = @search.result
 
     respond_to do |format|
       format.html # show.html.erb

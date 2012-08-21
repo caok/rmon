@@ -8,6 +8,7 @@ gem 'rails', '3.2.6'
 
 gem 'jquery-rails'
 gem 'gmaps4rails'
+gem 'ransack'
 #gem 'thin'
 
 # Gems used only for assets and not required

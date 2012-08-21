@@ -2,7 +2,9 @@ class InfosController < ApplicationController
   # GET /infos
   # GET /infos.json
   def index
-    @infos = Info.all
+    @search = Info.search(params[:q])
+    @infos = @search.result
+    @search.build_condition
 
     respond_to do |format|
       format.html # index.html.erb

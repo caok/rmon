@@ -2,16 +2,33 @@
 <div class="page-header">
   <h1><%=t '.title', :default => model_class.model_name.human.pluralize %></h1>
 </div>
+
+<%= search_form_for @search do |f| %>
+  <%= f.condition_fields do |c| %>
+    <div class="field">
+      <%= c.attribute_fields do |a| %>
+        <%= a.attribute_select %>
+      <% end %>
+      <%= c.predicate_select %>
+      <%= c.value_fields do |v| %>
+        <%= v.text_field :value %>
+      <% end %>
+      <%= link_to "remove", '#', :class => "remove_fields" %>
+    </div>
+  <% end %>
+  <div><%= f.submit "搜索", :class => 'btn btn-success' %></div>
+<% end %>
+
 <table class="table table-striped">
   <thead>
     <tr>
-      <th><%= model_class.human_attribute_name(:id) %></th>
-      <th><%= model_class.human_attribute_name(:location) %></th>
-      <th><%= model_class.human_attribute_name(:temperature) %></th>
-      <th><%= model_class.human_attribute_name(:humidity) %></th>
-      <th><%= model_class.human_attribute_name(:status) %></th>
-      <th><%= model_class.human_attribute_name(:happened_at) %></th>
-      <th><%= model_class.human_attribute_name(:created_at) %></th>
+      <th><%= sort_link @search, :id, model_class.human_attribute_name(:id) %></th>
+      <th><%= sort_link @search, :location_name, model_class.human_attribute_name(:location) %></th>
+      <th><%= sort_link @search, :temperature, model_class.human_attribute_name(:temperature) %></th>
+      <th><%= sort_link @search, :humidity, model_class.human_attribute_name(:humidity) %></th>
+      <th><%= sort_link @search, :status, model_class.human_attribute_name(:status) %></th>
+      <th><%= sort_link @search, :happened_at, model_class.human_attribute_name(:happened_at) %></th>
+      <th><%= sort_link @search, :created_at, model_class.human_attribute_name(:created_at) %></th>
       <th><%=t 'views.actions', :default => t("helpers.actions") %></th>
     </tr>
   </thead>
@@ -19,7 +36,7 @@
     <% @infos.each do |info| %>
       <tr>
         <td><%= link_to info.id, info_path(info) %></td>
-        <td><%= info.try(:location).try(:name) %></td>
+        <td><%= link_to info.try(:location).try(:name), info.location %></td>
         <td><%= info.temperature %></td>
         <td><%= info.humidity %></td>
         <td><%= info.status %></td>

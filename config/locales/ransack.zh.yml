@@ -14,7 +14,7 @@ zh:
     asc: "ascending"
     desc: "descending"
     predicates:
-      eq: "等于"
+      eq: "="
       eq_any: "equals any"
       eq_all: "equals all"
       not_eq: "not equal to"
@@ -44,7 +44,7 @@ zh:
       not_in: "not in"
       not_in_any: "not in any"
       not_in_all: "not in all"
-      cont: ""
+      cont: "包含"
       cont_any: "contains any"
       cont_all: "contains all"
       not_cont: "doesn't contain"
