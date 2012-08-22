@@ -4,6 +4,7 @@ class InfosController < ApplicationController
   def index
     @search = Info.search(params[:q])
     @infos = @search.result
+    @infos = @infos.page(params[:page])
     @search.build_condition
 
     respond_to do |format|

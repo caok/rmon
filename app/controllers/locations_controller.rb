@@ -4,6 +4,7 @@ class LocationsController < ApplicationController
   def index
     @search = Location.search(params[:q])
     @locations = @search.result
+    @locations = @locations.page(params[:page])
     @search.build_condition
 
     respond_to do |format|
@@ -27,6 +28,7 @@ class LocationsController < ApplicationController
     @location = Location.find(params[:id])
     @search = @location.infos.search(params[:q])
     @infos = @search.result
+    @infos = @infos.page(params[:page]).per(10)
 
     respond_to do |format|
       format.html # show.html.erb
