@@ -10,6 +10,7 @@
  *
  *= require_self
  *= require_tree .
+ *= require base
  *= require gmaps4rails
  */
 

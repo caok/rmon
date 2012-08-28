@@ -54,7 +54,7 @@ test: &test
 production:
   adapter: mysql2
   host: localhost
-  database: gmaps
+  database: gmaps_development
   username: root
   password: root
   encoding: utf8
