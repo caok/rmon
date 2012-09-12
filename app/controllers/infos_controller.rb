@@ -1,4 +1,6 @@
 class InfosController < ApplicationController
+  load_and_authorize_resource :only => [:new,:edit,:create,:update,:destroy]
+
   # GET /infos
   # GET /infos.json
   def index

@@ -11,6 +11,7 @@
     <%= stylesheet_link_tag 'gmaps4rails' %>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>
+
   <body>
     <div class="navbar navbar-fixed-top">
       <div class="navbar-inner">
@@ -23,18 +24,46 @@
           <a class="brand" href="#">Gmaps</a>
           <div class="nav-collapse">
             <ul class="nav">
-              <li><%= link_to "Locations", locations_path %></li>
-              <li><%= link_to "Infos", infos_path %></li>
+              <li class='<%= 'active' if params[:controller] == 'home' %>'>
+                <%= link_to "Home", root_path %>
+              </li>
+              <li class='<%= 'active' if params[:controller] == 'locations' %>'>
+                <%= link_to "Locations", locations_path %>
+              </li>
+              <li class='<%= 'active' if params[:controller] == 'infos' %>'>
+                <%= link_to "Infos", infos_path %>
+              </li>
               <li><%= link_to "Contact Us" %></li>
               <li><%= link_to "About" %></li>
+            </ul>
+            <ul class='nav pull-right'>
+              <% if user_signed_in? -%>
+                <li class='dropdown'>
+                  <a class="dropdown-toggle" data-toggle="dropdown">
+                    <%= current_user.name %>
+                    <b class='caret'></b>
+                  </a>
+                  <ul class='dropdown-menu'>
+                    <li><%= link_to "个人资料", :controller => "my", :action => "information" %></li>
+                    <li><%= link_to "编辑个人资料", :controller => "my", :action => "edit" %></li>
+                    <li><%= link_to '修改密码', :controller => "my", :action => "password" %></li>
+                    <li><%= link_to "退出", destroy_user_session_path, :method => :delete %></li>
+                  </ul>
+                </li>
+              <% else -%>
+                <li><%= link_to "登录", new_user_session_path %></li>
+              <% end -%>
             </ul>
           </div>
         </div>
       </div>
     </div>
+
     <div class="container">
+      <%= render 'layouts/messages' %>
       <%= yield %>
       <%= yield :scripts %>
+
       <a class="go_top" href="#"><i class="icon icons_go_top"></i></a>
       <hr>
       <footer>
