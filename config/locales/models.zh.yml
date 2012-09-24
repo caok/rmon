@@ -35,6 +35,9 @@ zh:
         updated_at: "更新时间"
       info:
         location: "检测位置"
+        location_id: "检测位置"
+        latitude: "纬度"
+        longitude: "经度"
         temperature: "温度"
         humidity: "湿度"
         status: "设备状态"

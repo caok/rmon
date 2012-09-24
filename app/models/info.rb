@@ -1,5 +1,5 @@
 class Info < ActiveRecord::Base
-  attr_accessible :humidity, :temperature, :location_id, :status, :happened_at
+  attr_accessible :humidity, :temperature, :location_id, :status, :happened_at, :longitude, :latitude
 
   belongs_to :location
 

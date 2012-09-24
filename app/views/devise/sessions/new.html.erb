@@ -18,10 +18,10 @@
     <div class="controls">
       <label class="checkbox">
         <% if devise_mapping.rememberable? -%>
-          <div><%= f.check_box :remember_me %> <%= f.label :remember_me %></div>
+          <div><%= f.check_box :remember_me %> <%= f.label "保持登录状态" %></div>
         <% end -%>
       </label>
-      <%= f.submit "Sign in", :class => 'btn btn-primary' %>
+      <%= f.submit "登录", :class => 'btn btn-primary' %>
     </div>
   </div>
   <% end %>

@@ -15,6 +15,8 @@ ActiveRecord::Schema.define(:version => 20120912104104) do
 
   create_table "infos", :force => true do |t|
     t.integer  "location_id"
+    t.string   "latitude"
+    t.string   "longitude"
     t.string   "temperature"
     t.string   "humidity"
     t.string   "status"

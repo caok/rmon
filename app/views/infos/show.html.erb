@@ -5,7 +5,11 @@
 
 <dl class="dl-horizontal">
   <dt><strong><%= model_class.human_attribute_name(:location) %>:</strong></dt>
-  <dd><%= @info.location.name %></dd>
+  <dd><%= @info.try(:location).try(:name) %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:latitude) %>:</strong></dt>
+  <dd><%= @info.latitude %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:longitude) %>:</strong></dt>
+  <dd><%= @info.longitude %></dd>
   <dt><strong><%= model_class.human_attribute_name(:temperature) %>:</strong></dt>
   <dd><%= @info.temperature %></dd>
   <dt><strong><%= model_class.human_attribute_name(:humidity) %>:</strong></dt>

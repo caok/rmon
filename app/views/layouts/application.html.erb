@@ -25,16 +25,15 @@
           <div class="nav-collapse">
             <ul class="nav">
               <li class='<%= 'active' if params[:controller] == 'home' %>'>
-                <%= link_to "Home", root_path %>
+                <%= link_to "首页", root_path %>
               </li>
               <li class='<%= 'active' if params[:controller] == 'locations' %>'>
-                <%= link_to "Locations", locations_path %>
+                <%= link_to "监测点", locations_path %>
               </li>
               <li class='<%= 'active' if params[:controller] == 'infos' %>'>
-                <%= link_to "Infos", infos_path %>
+                <%= link_to "检测数据查询", infos_path %>
               </li>
-              <li><%= link_to "Contact Us" %></li>
-              <li><%= link_to "About" %></li>
+              <li><%= link_to "关于" %></li>
             </ul>
             <ul class='nav pull-right'>
               <% if user_signed_in? -%>

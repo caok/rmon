@@ -1,1 +1,35 @@
-
+<div class="row-fluid">
+  <div class="span3">
+    <ul class="nav nav-tabs nav-stacked">
+              <li class='<%= 'active' if params[:controller] == 'home' %>'>
+                <%= link_to "首页", root_path %>
+              </li>
+              <li class='<%= 'active' if params[:controller] == 'locations' %>'>
+                <%= link_to "监测点信息", locations_path %>
+              </li>
+              <li>
+                <%= link_to "地图监测点", map_locations_path %>
+              </li>
+              <li class='<%= 'active' if params[:controller] == 'infos' %>'>
+                <%= link_to "实时数据检测", infos_path %>
+              </li>
+              <li><%= link_to "联系我们" %></li>
+              <li><%= link_to "关于" %></li>
+    </ul>
+  </div>
+  <div class="span9">
+    <div class="hero-unit">
+      <div id="myCarousel" class="carousel slide">
+        <!-- Carousel items -->
+        <div class="carousel-inner">
+          <div class="item active" align=center><img src="<%= asset_path '1.jpg' %>" alt></div>
+          <div class="item" align=center><img src="<%= asset_path '2.jpg' %>" alt></div>
+          <div class="item" align=center><img src="<%= asset_path '3.jpg' %>" alt></div>
+        </div>
+        <!-- Carousel nav -->
+        <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+        <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
+      </div>
+    </div>
+  </div>
+</div>
