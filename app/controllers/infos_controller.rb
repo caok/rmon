@@ -15,6 +15,15 @@ class InfosController < ApplicationController
     end
   end
 
+  def map
+    @json = Info.all.to_gmaps4rails
+
+    respond_to do |format|
+      format.html
+      format.json { render json: @infos }
+    end
+  end
+
   # GET /infos/1
   # GET /infos/1.json
   def show

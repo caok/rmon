@@ -1,16 +1,16 @@
 class CreateInfos < ActiveRecord::Migration
   def change
     create_table :infos do |t|
-      t.references :location
       t.string :latitude
       t.string :longitude
       t.string :temperature
       t.string :humidity
+      t.string :nitrogen
+      t.string :phosphoru
+      t.string :potassium
       t.string :status
       t.datetime :happened_at
-
-      t.timestamps
+      t.boolean  :gmaps
     end
-    add_index :infos, :location_id
   end
 end

@@ -14,29 +14,16 @@
 ActiveRecord::Schema.define(:version => 20120912104104) do
 
   create_table "infos", :force => true do |t|
-    t.integer  "location_id"
     t.string   "latitude"
     t.string   "longitude"
     t.string   "temperature"
     t.string   "humidity"
+    t.string   "nitrogen"
+    t.string   "phosphoru"
+    t.string   "potassium"
     t.string   "status"
     t.datetime "happened_at"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
-  end
-
-  add_index "infos", ["location_id"], :name => "index_infos_on_location_id"
-
-  create_table "locations", :force => true do |t|
-    t.string   "name"
-    t.string   "country"
-    t.string   "city"
-    t.string   "street"
-    t.float    "latitude"
-    t.float    "longitude"
     t.boolean  "gmaps"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
   end
 
   create_table "users", :force => true do |t|

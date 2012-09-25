@@ -1,11 +1,5 @@
 <%= form_for @info, :html => { :class => 'form-horizontal' } do |f| %>
   <div class="control-group">
-    <%= f.label :location, :class => 'control-label' %>
-    <div class="controls">
-      <%= f.collection_select :location_id, Location.all, :id, :name, :class => 'select_field' %>
-    </div>
-  </div>
-  <div class="control-group">
     <%= f.label :latitude, :class => 'control-label' %>
     <div class="controls">
       <%= f.text_field :latitude, :class => 'text_field' %>
@@ -30,6 +24,24 @@
     </div>
   </div>
   <div class="control-group">
+    <%= f.label :nitrogen, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :nitrogen, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :phosphoru, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :phosphoru, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :potassium, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :potassium, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
     <%= f.label :status, :class => 'control-label' %>
     <div class="controls">
       <%= f.text_field :status, :class => 'text_field' %>
@@ -41,6 +53,7 @@
       <%= f.datetime_select :happened_at, :class => 'datetime_select' %>
     </div>
   </div>
+  <%= f.hidden_field :gmaps, :value => 1 %>
 
   <div class="form-actions">
     <%= f.submit nil, :class => 'btn btn-primary' %>

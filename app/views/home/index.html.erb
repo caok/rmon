@@ -4,11 +4,8 @@
               <li class='<%= 'active' if params[:controller] == 'home' %>'>
                 <%= link_to "首页", root_path %>
               </li>
-              <li class='<%= 'active' if params[:controller] == 'locations' %>'>
-                <%= link_to "监测点信息", locations_path %>
-              </li>
               <li>
-                <%= link_to "地图监测点", map_locations_path %>
+                <%= link_to "地图监测点", map_infos_path %>
               </li>
               <li class='<%= 'active' if params[:controller] == 'infos' %>'>
                 <%= link_to "实时数据检测", infos_path %>

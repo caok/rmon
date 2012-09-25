@@ -1,7 +1,9 @@
 Gmaps::Application.routes.draw do
   devise_for :users, :path => ''
 
-  resources :infos
+  resources :infos do
+    get :map, :on => :collection
+  end
 
   resources :locations do
     get :map, :on => :collection
