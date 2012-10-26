@@ -30,8 +30,8 @@ production:
 
 development:
   adapter: mysql2
-  #host: 172.16.72.88
-  host: localhost
+  host: 172.16.72.88
+  #host: localhost
   database: gmaps
   username: root
   password: root

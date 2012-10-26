@@ -4,6 +4,8 @@
 </div>
 
 <dl class="dl-horizontal">
+  <dt><strong><%= model_class.human_attribute_name(:happened_at) %>:</strong></dt>
+  <dd><%= format_datetime @info.happened_at %></dd>
   <dt><strong><%= model_class.human_attribute_name(:location) %>:</strong></dt>
   <dd><%= @info.latitude %></dd>
   <dt><strong><%= model_class.human_attribute_name(:latitude) %>:</strong></dt>
@@ -24,8 +26,6 @@
   <dd><%= @info.potassium %></dd>
   <dt><strong><%= model_class.human_attribute_name(:status) %>:</strong></dt>
   <dd><%= @info.status %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:happened_at) %>:</strong></dt>
-  <dd><%= format_datetime @info.happened_at %></dd>
 </dl>
 
 <% if can? :manage, @info -%>

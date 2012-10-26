@@ -23,6 +23,7 @@
   <thead>
     <tr>
       <th><%= sort_link @search, :id, model_class.human_attribute_name(:id) %></th>
+      <th><%= sort_link @search, :happened_at, model_class.human_attribute_name(:happened_at) %></th>
       <th><%= sort_link @search, :latitude, model_class.human_attribute_name(:latitude) %></th>
       <th><%= sort_link @search, :longitude, model_class.human_attribute_name(:longitude) %></th>
       <th><%= sort_link @search, :temperature, model_class.human_attribute_name(:temperature) %></th>
@@ -31,7 +32,6 @@
       <th><%= sort_link @search, :phosphoru, model_class.human_attribute_name(:phosphoru) %></th>
       <th><%= sort_link @search, :potassium, model_class.human_attribute_name(:potassium) %></th>
       <th><%= sort_link @search, :status, model_class.human_attribute_name(:status) %></th>
-      <th><%= sort_link @search, :happened_at, model_class.human_attribute_name(:happened_at) %></th>
       <% if can? :manage, Info -%>
         <th><%=t 'views.actions', :default => t("helpers.actions") %></th>
       <% end -%>
@@ -41,6 +41,7 @@
     <% @infos.each do |info| %>
       <tr>
         <td><%= link_to info.id, info_path(info) %></td>
+        <td><%= format_datetime info.happened_at %></td>
         <td><%= info.latitude %></td>
         <td><%= info.longitude %></td>
         <td><%= info.temperature %></td>
@@ -49,7 +50,6 @@
         <td><%= info.phosphoru %></td>
         <td><%= info.potassium %></td>
         <td><%= info.status %></td>
-        <td><%= format_datetime info.happened_at %></td>
         <% if can? :manage, Info -%>
         <td>
           <%= link_to t('link.edit', :default => t("helpers.links.edit")),
