@@ -40,10 +40,6 @@ class User < ActiveRecord::Base
     !(roles & a.map{|i| i.to_s}).empty?
   end
 
-  def checkable?(program)
-    programs.include? program
-  end
-
   def priority
     if id == 1
       0
